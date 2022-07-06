@@ -14,8 +14,10 @@ def test_do_maths(x, y, expected):
 def fruits_test_data():
     return ["banana", "pear"]
 
-# TEST 2
+# TEST 2  add to array function 
 def test_add_fruit(fruits_test_data):
     salad = stuff.add_fruit('mango', fruits_test_data)
-    assert 'mongo' in salad
+    assert 'mango' in salad
     # element is in the array
+
+# TEST 3  Errors

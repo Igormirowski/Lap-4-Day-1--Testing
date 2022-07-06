@@ -41,4 +41,4 @@ coverage = "pytest --cov-report term-missing --cov-."
 - `pipenv run coverage` Coverage
 - add more functions (add_fruits) and test
 - we implement fixture 
-
+- ** Optional `pipenv install --dev pep8 autopep8`

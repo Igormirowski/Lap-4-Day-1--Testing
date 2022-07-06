@@ -44,4 +44,5 @@ coverage = "pytest --cov-report term-missing --cov-."
 - ** Optional `pipenv install --dev pep8 autopep8`
 - add 3rd test how_many_sweets
 - replace Exceptiom with StuffError in both files 
+- add greeting function 
 - 

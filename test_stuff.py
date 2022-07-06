@@ -1,8 +1,6 @@
 import pytest
 import stuff
 
-
-
 # TEST 1 
 # we check when operation happens we get expected
 
@@ -11,4 +9,13 @@ def test_do_maths(x, y, expected):
     assert stuff.do_maths(x,y) == expected
 
 
+
+@pytest.fixture
+def fruits_test_data():
+    return ["banana", "pear"]
+
 # TEST 2
+def test_add_fruit(fruits_test_data):
+    salad = stuff.add_fruit('mango', fruits_test_data)
+    assert 'mongo' in salad
+    # element is in the array

@@ -33,3 +33,6 @@ def how_many_sweets(sweets, people):
 # We got 1.5 sweets per peopl/ if last list is empty we print message line 26
 print(how_many_sweets(["sw1", "sw1", "sw3"], [1, 2])
 )
+
+if __name__ == "__main__":
+    how_many_sweets([1,2], [])

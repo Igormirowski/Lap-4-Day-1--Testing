@@ -23,5 +23,5 @@ def test_add_fruit(fruits_test_data):
 # TEST 3  Num of sweets Error
 
 def test_how_many_sweets():
-    with pytest.raises(Exception, match="We need some people to share sweets with!"):
+    with pytest.raises(stuff.StuffError, match="We need some people to share sweets with!"):
         stuff.how_many_sweets(['sweet1','sweet2'], [])

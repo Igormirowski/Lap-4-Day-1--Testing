@@ -53,5 +53,7 @@ coverage = "pytest --cov-report term-missing --cov-."
 - monkeypatch with cats test (mocking)
 - with monkeypatch we can set attributes 
 `monkeypatch.setattr(obj, name, value, raising=True)`
-- 
+
+
+- `pipenv install requests` , import in stuff.py
 

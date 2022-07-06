@@ -1,5 +1,5 @@
 
-
+import requests
         # 1.
 def do_maths(x, y):
     return x +y
@@ -57,6 +57,10 @@ def find_cat_by_id(cat_id):
 # [cat for cat in cats if cat['id'] == cat_id]
 
 
+def fetch_stuff():
+    req = requests.get("https://api.github.com/users/getfutureproof")
+    data = request.json()
+    print(f"Email is {data["email]"}")
 
 
 if __name__ == "__main__":

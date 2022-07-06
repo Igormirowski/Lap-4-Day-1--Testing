@@ -56,4 +56,8 @@ coverage = "pytest --cov-report term-missing --cov-."
 
 
 - `pipenv install requests` , import in stuff.py
-
+- add fetch_stuff function --> use mock module from unitest
+Add to test file
+``
+from unitest import mock
+``

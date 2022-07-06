@@ -1,6 +1,8 @@
 import pytest
 import stuff
 import sys
+from unittest import mock
+import requests
 
 # TEST 1 
 # we check when operation happens we get expected
@@ -45,7 +47,15 @@ def test_find_cat_by_id(monkeypatch):
     monkeypatch.setattr(stuff, 'cats', mock_cats)
     result = stuff.find_cat_by_id(2)
     assert result['name'] == 'Happy'
-
-
-
     # monkeypatch.setattr(obj, name, value, raising=True)
+
+# TEST 5 API
+
+def test_fetch_stuff():
+    mock_respone = mock.Mock() #mock respone
+    mock_respone.json.return_value = {
+        "email": "test@example", "login": "testing"
+    }
+    mock_get = mock.Mock(return_value=mock_respone)
+    requests.get = mock_get
+    mock_get.assert_called_with("https://api.github.com/users/getfutureproof")

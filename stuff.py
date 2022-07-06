@@ -56,11 +56,14 @@ def find_cat_by_id(cat_id):
 # # 3rd way of line 49 (comprehention list)
 # [cat for cat in cats if cat['id'] == cat_id]
 
-
+            # API 
 def fetch_stuff():
     req = requests.get("https://api.github.com/users/getfutureproof")
-    data = request.json()
-    print(f"Email is {data["email]"}")
+    data = req.json()
+    print(f"Email is {data['email']}")
+
+
+fetch_stuff()
 
 
 if __name__ == "__main__":

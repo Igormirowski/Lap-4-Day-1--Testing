@@ -21,9 +21,13 @@ print (salad)
 
         # 3. Num of sweets Error
 
+# define stuff error class
+class StuffError(Exception):
+    pass
+
 def how_many_sweets(sweets, people):
     if not people:
-        raise Exception("We need some people to share sweets with!")
+        raise StuffError("We need some people to share sweets with!")
     return len(sweets) / len(people)
 
 # We got 1.5 sweets per peopl/ if last list is empty we print message line 26

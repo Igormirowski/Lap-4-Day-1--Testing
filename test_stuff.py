@@ -51,11 +51,15 @@ def test_find_cat_by_id(monkeypatch):
 
 # TEST 5 API
 
-def test_fetch_stuff():
-    mock_respone = mock.Mock() #mock respone
-    mock_respone.json.return_value = {
-        "email": "test@example", "login": "testing"
+def test_fetch_stuff(capsys):
+    mock_respone = mock.Mock() #mocking respone
+    mock_respone.json.return_value = {      #we setting attribute with json(written value underneath)
+        "email": "test@example.com", "login": "testing"
     }
-    mock_get = mock.Mock(return_value=mock_respone)
+    mock_get = mock.Mock(return_value=mock_respone) # mock value when I return request
     requests.get = mock_get
+    stuff.fetch_stuff() #call
     mock_get.assert_called_with("https://api.github.com/users/getfutureproof")
+
+    out, err = capsys.readouterr()
+    assert "test@example.com" in out

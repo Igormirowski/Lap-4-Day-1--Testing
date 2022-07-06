@@ -14,4 +14,4 @@ python_version = "3.9"
 
 [scripts]
 test = "pytest ."
-coverage = "pytest --cov-report term-missing --cov-."
+coverage = "pytest --cov-report term-missing --cov=."

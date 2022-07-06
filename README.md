@@ -38,4 +38,5 @@ test = "pytest ."
 coverage = "pytest --cov-report term-missing --cov-."
 ```
 
-- `pipenv run coverage` See coverage 
+- `pipenv run coverage` Coverage
+- 

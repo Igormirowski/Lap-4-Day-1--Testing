@@ -1,1 +1,5 @@
-print("hello world")
+
+
+
+def do_maths(x, y):
+    return x +y

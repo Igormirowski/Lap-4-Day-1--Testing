@@ -50,4 +50,8 @@ coverage = "pytest --cov-report term-missing --cov-."
 - add test and use capsys (gives acces to things in your machine)
 - make test pass (add import sys)
 - `pytest --capture=tee-sys` makes msg available
+- monkeypatch with cats test (mocking)
+- with monkeypatch we can set attributes 
+`monkeypatch.setattr(obj, name, value, raising=True)`
 - 
+

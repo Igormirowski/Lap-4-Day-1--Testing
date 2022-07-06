@@ -42,6 +42,23 @@ def greeting(name):
 
 
 
+
+        # 5. cats
+cats = []
+# cats = [{'id': 1, 'name': 'Garfield'}, {'id': 2, 'name': "Felix"}]
+def find_cat_by_id(cat_id):
+    return next(cat for cat in cats if cat['id'] == cat_id)
+
+# # 2nd way of line 49
+#     for cat in cats:
+#         if cat['id'] == cat_id:
+#             return cat
+# # 3rd way of line 49 (comprehention list)
+# [cat for cat in cats if cat['id'] == cat_id]
+
+
+
+
 if __name__ == "__main__":
     # how_many_sweets([1,2], [])
 

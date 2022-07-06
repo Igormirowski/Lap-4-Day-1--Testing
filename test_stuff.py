@@ -31,9 +31,21 @@ def test_how_many_sweets():
 # TEST 4 in terminal  greeting
 def test_greeting(capsys):
     stuff.greeting("Beth")
-    
+
     out, err = capsys.readouterr()
     sys.stdout.write(out)
 
     assert 'Beth' in out 
     assert out == "Hello, Beth!\n"
+
+# TEST 5 cats
+def test_find_cat_by_id(monkeypatch):
+    mock_cats = [{'id': 1, 'name': 'Garfield'}, {'id': 2, 'name': "Happy"}]
+
+    monkeypatch.setattr(stuff, 'cats', mock_cats)
+    result = stuff.find_cat_by_id(2)
+    assert result['name'] == 'Happy'
+
+
+
+    # monkeypatch.setattr(obj, name, value, raising=True)

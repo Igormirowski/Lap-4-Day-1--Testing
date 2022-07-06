@@ -38,7 +38,7 @@ print(how_many_sweets(["sw1", "sw1", "sw3"], [1, 2])
         # 4. greeting
 
 def greeting(name):
-    print (f"Hello, {name}")
+    print (f"Hello, {name}!")
 
 
 

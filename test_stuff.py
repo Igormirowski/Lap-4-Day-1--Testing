@@ -25,3 +25,12 @@ def test_add_fruit(fruits_test_data):
 def test_how_many_sweets():
     with pytest.raises(stuff.StuffError, match="We need some people to share sweets with!"):
         stuff.how_many_sweets(['sweet1','sweet2'], [])
+
+
+# TEST 4 in terminal  greeting
+def test_greeting(capsys):
+    stuff.greeting("Beth")
+    out, err = capsys.readouterr()
+
+    assert 'Beth' in out 
+    assert out == "Hello, Beth!\n"

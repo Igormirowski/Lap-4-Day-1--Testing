@@ -1,5 +1,6 @@
 import pytest
 import stuff
+import sys
 
 # TEST 1 
 # we check when operation happens we get expected
@@ -30,7 +31,9 @@ def test_how_many_sweets():
 # TEST 4 in terminal  greeting
 def test_greeting(capsys):
     stuff.greeting("Beth")
+    
     out, err = capsys.readouterr()
+    sys.stdout.write(out)
 
     assert 'Beth' in out 
     assert out == "Hello, Beth!\n"

@@ -48,3 +48,6 @@ coverage = "pytest --cov-report term-missing --cov-."
 ### Test in terminal
 - add greeting function 
 - add test and use capsys (gives acces to things in your machine)
+- make test pass (add import sys)
+- `pytest --capture=tee-sys` makes msg available
+- 
